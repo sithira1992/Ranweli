@@ -19,36 +19,17 @@
 
 
 
-<div class="form-group">
-    <div class="row featurette">
-        <div class="col-md-3">
-            <input class="form-control input-lg" type="text" id="inputLarge"
-                   value="" placeholder="Email Address">
-
-        </div>
-        <div class="col-md-3 ">
-            <input class="form-control input-lg" type="text" id="email"
-                   value="" placeholder="Repeat Email Address">
-
-        </div>
-
-        <div class="col-md-3 ">
-            <input class="form-control input-lg" type="password" id="lName"
-                   value="" placeholder="Password">
-        </div>
-
-        <div class="col-md-3 ">
-            <button type="button" class="btn btn-primary btn-lg">Register
-                Today</button>
-            <a href="#myModal" role="button" id="myButt"
-               class="btn btn-large btn-primary" data-toggle="modal">Launch
-                Demo Modal</a>
-
-        </div>
-
-
+<form role="form">
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">
     </div>
-
-
-
-</div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
