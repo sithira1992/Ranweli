@@ -1,4 +1,4 @@
-<?php include 'Header.php';?>
+<?php include 'header.php';?>
 <?php include 'NavBar.php';?>
 <form role="form" xmlns="http://www.w3.org/1999/html">
     <div class="col-sm-3"
