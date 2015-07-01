@@ -9,6 +9,8 @@
 
     <input type="email" class="form-control" id="email" placeholder="Enter email">
 
+
+        
         </div>
     </div>
 
