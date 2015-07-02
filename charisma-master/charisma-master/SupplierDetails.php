@@ -82,9 +82,9 @@
     <div class="control-label col-sm-12">
         <div class="col-xs-4">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <!--button type="clear" class="btn btn-primary">Clear</button>
-        <button type="cancel" class="btn btn-primary">Cancel</button-->
+        <button type="suppliersubmit" class="btn btn-primary">Submit</button>
+        <button type="supplierclear" class="btn btn-primary">Clear</button>
+        <button type="suppliercancel" class="btn btn-primary">Cancel</button>
     </div>
 </form>
 
