@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="form-group has-success has-feedback">
-                <label for="phone" class="control-label" style="padding-right:80px">Email</label>
+                <label for="email" class="control-label" style="padding-right:80px">Email</label>
                 <input class="form-control" id="email" type="text"placeholder="Email Address">
             </div>
         </form>
