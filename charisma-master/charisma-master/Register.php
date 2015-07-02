@@ -57,10 +57,10 @@
         <label for="gender" class="control-label" style="padding-right:60px">Gender</label>
         <div class="radio">
             <label>
-                <input name="male" id="male" value="option1" checked="" type="radio">
+                <input name="sex" id="male" value="option1" checked="" type="radio">
                 Male
                 <label>
-                    <input name="female" id="female" value="option2" checked="" type="radio">
+                    <input name="sex" id="female" value="option2"  type="radio">
                     Female
                 </label>
             </label>
@@ -126,9 +126,8 @@
                 </ul>
             </div>
         </div>
-
-        </br>
-        </br>
+</div>
+    </form>
         </br>
 
         <!--Email-->
