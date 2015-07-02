@@ -110,22 +110,14 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="Position" class="control-label" style="padding-right:60px">Position</label>
-        <div id="position" title="" style="width: 100px;" class="chosen-container chosen-container-single">
-            <a class="chosen-single" tabindex="-2">
-                <span>Choose</span>
-                <div><b></b></div>
-            </a><div class="chosen-drop">
-                <div class="chosen-search">
-                    <input autocomplete="off" type="text"></div>
-                <ul class="chosen-results">
-                    <li data-option-array-index="0" style="" class="active-result result-selected">Option 1</li>
-                    <li data-option-array-index="1" style="" class="active-result">Option 2</li>
-                    <li data-option-array-index="2" style="" class="active-result">Option 3</li>
-                    <li data-option-array-index="3" style="" class="active-result">Option 4</li>
-                    <li data-option-array-index="4" style="" class="active-result">Option 5</li>
-                </ul>
+        <select class="form-control" style="width:215px">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
             </div>
-        </div>
+
 </div>
     </form>
         </br>
