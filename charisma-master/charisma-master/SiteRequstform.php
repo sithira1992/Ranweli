@@ -11,6 +11,7 @@
 
 <!--Site Name-->
 </div>
+
 <form class="form-inline" role="form">
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
@@ -75,35 +76,40 @@
 
 <!--Type of measure -->
 <form class="form-inline" role="form">
-    <div class="control-label col-sm-3">
-        <div class="col-xs-4">
+        <form class="form-inline" role="form">
+        <div class="control-label col-sm-3">
+            <div class="col-xs-4">
+            </div>
         </div>
-    </div>
-    <div class="form-group has-success has-feedback">
-        <label for="type" class="control-label" style="padding-right:80px">Unit</label>
-        <div id="type" title="" style="width: 100px;" class="chosen-container chosen-container-single" >
-            <a class="chosen-single" tabindex="-2">
-                <span>Choose</span>
-                <div><b></b></div>
-            </a><div class="chosen-drop" style="padding-right:10px">
-                <div class="chosen-search">
-                    <input autocomplete="off" type="text"></div>
-                <ul class="chosen-results">
-                    <li data-option-array-index="0" style="" class="active-result result-selected">Option 1</li>
-                    <li data-option-array-index="1" style="" class="active-result">Option 2</li>
-                    <li data-option-array-index="2" style="" class="active-result">Option 3</li>
-                    <li data-option-array-index="3" style="" class="active-result">Option 4</li>
-                    <li data-option-array-index="4" style="" class="active-result">Option 5</li>
-                </ul>
-             </div>
-           </div>
+        <div class="form-group has-success has-feedback">
+            <label for="Position" class="control-label" style="padding-right:80px">Unit</label>
+            <select class="form-control" style="width:220px">
+                <option value="cube">Cube</option>
+                <option value="Kg">Kg</option>
+                <option value="Bags">Bags</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
 
-            <div class="form-group has-success has-feedback">
-            <label for="quantity" class="control-label" style="padding-right:10px">Quantity</label>
-            <input class="form-control" id="quantity" type="text" style="width: 100px" placeholder="Qty">
         </div>
+    </form>
 
         </form>
+
+</br>
+</br>
+
+
+    <form class="form-inline" role="form">
+        <div class="control-label col-sm-3">
+            <div class="col-xs-4">
+            </div>
+        </div>
+<div class="form-group has-success has-feedback">
+    <label for="quantity" class="control-label" style="padding-right:60px">Quntity</label>
+    <input class="form-control" id="quantity" type="text" style="width: 100px" placeholder="Qty">
+</div>
+    </form>
 
 
 </br>
@@ -131,11 +137,12 @@
 
 <!--Send button-->
 <form class="form-inline" role="form">
-    <div class="control-label col-sm-11">
+    <div class="col-md-4 center-block">
         <div class="col-xs-4">
         </div>
         <button type="submit" class="btn btn-primary">Send</button>
         <button type="cancel" class="btn btn-primary">Cancel</button>
+
     </div>
 </form>
 

@@ -142,7 +142,7 @@
 
         <!--subit button-->
         <form class="form-inline" role="form">
-            <div class="control-label col-sm-11">
+            <div class="col-md-6 center-block">
                 <div class="col-xs-4">
                 </div>
         <button type="submit" class="btn btn-primary">Submit</button>
