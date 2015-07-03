@@ -26,32 +26,32 @@
         <label for="fullname" class="control-label" style="padding-right:40px">Full Name</label>
 
 
-        <input class="form-control" id="fullname" type="text"placeholder="Name With Initial">
+        <input class="form-control" id="fullname" name="name" type="text"placeholder="Name With Initial" value="" aria-describedby="name-format" required pattern="([A-Za-z])">
 
 
 
     </div>
 
 
-</form>
+<!--/form-->
 
 </br>
 </br>
 
 <!--address-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3"></div>
     <div class="form-group has-success has-feedback">
         <label for="address" class="control-label" style="padding-right:50px">Address</label>
         <textarea class="form-control" rows="4" id="address"placeholder="Address" style="width: 220px"></textarea>
    </div>
-</form>
+<!--/form-->
 </br>
 </br>
 
 
 <!--Gender-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3"></div>
     <div class="form-group has-success has-feedback">
         <label for="gender" class="control-label" style="padding-right:60px">Gender</label>
@@ -66,44 +66,44 @@
             </label>
         </div>
     </div>
-</form>
+<!--/form-->
 </br>
 </br>
 
 
 <!-- NIC Number-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
     </div>
     <div class="form-group has-success has-feedback">
         <label for="nic" class="control-label" style="padding-right:90px">NIC</label>
-        <input class="form-control" id="nic" type="text"placeholder="NIC Number">
+        <input class="form-control" id="nic" type="text"placeholder="NIC Number" pattern="{9}">
     </div>
-</form>
+<!--/form-->
 
 </br>
 </br>
 
 
 <!--Phone Number-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
     </div>
     <div class="form-group has-success has-feedback">
         <label for="phone" class="control-label" style="padding-right:70px">Phone</label>
-        <input class="form-control" id="phone" type="text"placeholder="Phone Number">
+        <input class="form-control" id="phone" type="text"placeholder="Phone Number " pattern="[7-9]{1}[0-9]{9}">
     </div>
-</form>
+<!--/form!-->
 
 </br>
 </br>
 
 <!--position-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
@@ -119,20 +119,22 @@
             </div>
 
 </div>
-    </form>
+    <!--/form-->
         </br>
+    </br>
 
         <!--Email-->
-        <form class="form-inline" role="form">
+        <!--form class="form-inline" role="form"-->
             <div class="control-label col-sm-3">
                 <div class="col-xs-4">
                 </div>
             </div>
             <div class="form-group has-success has-feedback">
                 <label for="email" class="control-label" style="padding-right:80px">Email</label>
-                <input class="form-control" id="email" type="text"placeholder="Email Address">
+                <input class="form-control" id="email" input type="email" required placeholder="Email Address">
+
             </div>
-        </form>
+        <!--/form-->
 
         </br>
         </br>
@@ -141,7 +143,7 @@
 
 
         <!--subit button-->
-        <form class="form-inline" role="form">
+        <!--form class="form-inline" role="form"-->
             <div class="col-md-6 center-block">
                 <div class="col-xs-4">
                 </div>

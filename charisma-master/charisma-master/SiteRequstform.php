@@ -12,23 +12,31 @@
 <!--Site Name-->
 </div>
 
+<!--form class="form-inline" role="form"-->
 <form class="form-inline" role="form">
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
     </div>
     <div class="form-group has-success has-feedback">
-       <label for="sitename" class="control-label" style="padding-right:40px">Site Name</label>
+
+
+        <label for="sitename" class="control-label" style="padding-right:40px">Site Name</label>
+
+
         <input class="form-control" id="sitename" type="text"placeholder="Enter Site Name">
+
+
+
     </div>
-</form>
+<!--/form-->
 
 </br>
 </br>
 
 
 <!--Site Location-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
@@ -37,14 +45,14 @@
         <label for="location" class="control-label" style="padding-right:50px">Location</label>
         <input class="form-control" id="location" type="text"placeholder="Enter Site Location">
     </div>
-</form>
+<!--/form-->
 
 </br>
 </br>
 
 
 <!--Site Manager Name-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
@@ -53,13 +61,13 @@
         <label for="manager" class="control-label" style="padding-right:50px">Manager</label>
         <input class="form-control" id="manager" type="text"placeholder="Enter Manager Name">
     </div>
-</form>
+<!--/form-->
 
 </br>
 </br>
 
 <!--Item Name-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
@@ -68,14 +76,14 @@
         <label for="item" class="control-label" style="padding-right:80px">Item</label>
         <input class="form-control" id="item" type="text"placeholder="Enter Item Name">
     </div>
-</form>
+<!--/form-->
 
 </br>
 </br>
 
 
 <!--Type of measure -->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
         <form class="form-inline" role="form">
         <div class="control-label col-sm-3">
             <div class="col-xs-4">
@@ -92,24 +100,24 @@
         </div>
 
         </div>
-    </form>
+    <!--/form-->
 
-        </form>
+        <!--/form-->
 
 </br>
 </br>
 
-
-    <form class="form-inline" role="form">
-        <div class="control-label col-sm-3">
-            <div class="col-xs-4">
-            </div>
+<!--Quntity-->
+    <!--form class="form-inline" role="form"-->
+    <div class="control-label col-sm-3">
+        <div class="col-xs-4">
         </div>
-<div class="form-group has-success has-feedback">
-    <label for="quantity" class="control-label" style="padding-right:60px">Quntity</label>
-    <input class="form-control" id="quantity" type="text" style="width: 100px" placeholder="Qty">
-</div>
-    </form>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <label for="qty" class="control-label" style="padding-right:50px">Quantity</label>
+        <input class="form-control" id="qty" aria-required type="number"required placeholder="Enter Qty">
+    </div>
+    <!--/form-->
 
 
 </br>
@@ -118,16 +126,16 @@
 
 
 <!--Date-->
-<form class="form-inline" role="form">
+<!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
     </div>
     <div class="form-group has-success has-feedback">
-        <label for="date" class="control-label" style="padding-right:80px">Date</label>
+        <label for="date" class="control-label" style="padding-right:75px">Date</label>
         <input class="form-control" id="date" type="text"placeholder="Enter Date">
     </div>
-</form>
+<!--/form-->
 
 
 </br>
@@ -136,15 +144,15 @@
 
 
 <!--Send button-->
-<form class="form-inline" role="form">
-    <div class="col-md-4 center-block">
+<!--form class="form-inline" role="form"-->
+    <div class="col-md-6 center-block">
         <div class="col-xs-4">
         </div>
         <button type="submit" class="btn btn-primary">Send</button>
         <button type="cancel" class="btn btn-primary">Cancel</button>
-
     </div>
 </form>
+    </form>
 
 </br>
 </br>
