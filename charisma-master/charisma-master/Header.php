@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="staffRegistration">
 <head>
     <!--
         ===
@@ -43,10 +43,13 @@
     <!-- jQuery -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="js/bootsrapjs/js/bootstrap.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/test/staffRegistration.js"> </script>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
     <![endif]-->
 
     <!-- The fav icon -->
@@ -128,3 +131,4 @@
 
     </div>
 </div>
+

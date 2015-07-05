@@ -1,12 +1,11 @@
+<section>
 <?php include 'header.php';?>
 <?php include 'NavBar.php';?>
 
-<div class="well">
+
     <!--header -->
-    <h1 align="center">Registeration </h1>
-
-
-
+    <div class="control-header col-sm-9">
+    <h1 align="center">Staff Registeration </h1>
 </div>
 
 
@@ -15,7 +14,7 @@
 
 <!--Name-->
 </div>
-<form class="form-inline" role="form">
+<form class="form-inline" role="form" ng-submit="submit()" ng-controller="FormCtrl">
     <div class="control-label col-sm-3">
     <div class="col-xs-4">
         </div>
@@ -26,7 +25,7 @@
         <label for="fullname" class="control-label" style="padding-right:40px">Full Name</label>
 
 
-        <input class="form-control" id="fullname" name="name" type="text"placeholder="Name With Initial" value="" aria-describedby="name-format" required pattern="([A-Za-z])">
+        <input class="form-control" id="fullname" name="name" ng-model="name" type="text"placeholder="Name With Initial" value=""  required="">
 
 
 
@@ -43,9 +42,9 @@
     <div class="control-label col-sm-3"></div>
     <div class="form-group has-success has-feedback">
         <label for="address" class="control-label" style="padding-right:50px">Address</label>
-        <textarea class="form-control" rows="4" id="address"placeholder="Address" style="width: 220px"></textarea>
+        <textarea class="form-control" rows="4" ng-model="address" id="address"placeholder="Address" style="width: 220px"></textarea>
    </div>
-<!--/form-->
+
 </br>
 </br>
 
@@ -57,10 +56,10 @@
         <label for="gender" class="control-label" style="padding-right:60px">Gender</label>
         <div class="radio">
             <label>
-                <input name="sex" id="male" value="option1" checked="" type="radio">
+                <input name="sex" id="male" value="male" checked="" type="radio" ng-model="gender">
                 Male
                 <label>
-                    <input name="sex" id="female" value="option2"  type="radio">
+                    <input name="sex" id="female" value="female"  type="radio" ng-model="gender">
                     Female
                 </label>
             </label>
@@ -79,7 +78,7 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="nic" class="control-label" style="padding-right:90px">NIC</label>
-        <input class="form-control" id="nic" type="text"placeholder="NIC Number" pattern="{9}">
+        <input class="form-control" id="nic" ng-model="nic"  type="text" placeholder="NIC Number" pattern="[0-9{{9}V}">
     </div>
 <!--/form-->
 
@@ -95,7 +94,7 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="phone" class="control-label" style="padding-right:70px">Phone</label>
-        <input class="form-control" id="phone" type="text"placeholder="Phone Number " pattern="[7-9]{1}[0-9]{9}">
+        <input class="form-control" id="phone" ng-model="phone" type="text"placeholder="Phone Number " pattern="[0-9]{1}[0-9]{9}" required="">
     </div>
 <!--/form!-->
 
@@ -110,7 +109,7 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="Position" class="control-label" style="padding-right:60px">Position</label>
-        <select class="form-control" style="width:215px">
+        <select class="form-control" style="width:215px" ng-model="position">
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="opel">Opel</option>
@@ -131,7 +130,12 @@
             </div>
             <div class="form-group has-success has-feedback">
                 <label for="email" class="control-label" style="padding-right:80px">Email</label>
-                <input class="form-control" id="email" input type="email" required placeholder="Email Address">
+
+                <div class="input-group input-group-md">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
+                    <input id="inputIcon" ng-model="email" type="text" class="form-control" placeholder="Username"  required="true">
+                </div>
+
 
             </div>
         <!--/form-->
@@ -142,22 +146,25 @@
         </br>
 
 
+
         <!--subit button-->
         <!--form class="form-inline" role="form"-->
             <div class="col-md-6 center-block">
                 <div class="col-xs-4">
                 </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" ng-click='submit()' class="btn btn-primary">Submit</button>
                 <button type="clear" class="btn btn-primary">Clear</button>
                 <button type="cancel" class="btn btn-primary">Cancel</button>
             </div>
+
+    <li class="alert-danger" ng-repeat="msg in msgs"> {{ msg}} </li>
         </form>
 
         </br>
         </br>
         </br>
         </br>
-
+</section>
 
 
 
