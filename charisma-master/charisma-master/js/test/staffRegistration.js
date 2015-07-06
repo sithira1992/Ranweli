@@ -42,7 +42,7 @@ angular.module('staffRegistration',[])
 
 .controller('FormCtrl1',['$scope','$http',function($scope, $http)
 {
-    
+
     $scope.submit= function () {    //subite button
 
         $scope.msgs = [];
