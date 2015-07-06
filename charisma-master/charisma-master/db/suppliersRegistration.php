@@ -14,6 +14,7 @@ $supplierstatues = mysql_real_escape_string($data->supplierstatues);
 $con = mysql_connect('localhost', 'root', '');
 mysql_select_db('ranweli', $con);
 
+
 $qry_em = 'select count(*) as ant from registersupplier where phone ="' . $supplierphone . '"';
 $qry_res = mysql_query($qry_em);
 $res = mysql_fetch_assoc($qry_res);

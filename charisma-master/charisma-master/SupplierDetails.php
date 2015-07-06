@@ -1,39 +1,52 @@
-<?php include 'header.php';?>
-<?php include 'NavBar.php';?>
+<section>
+    <?php include 'header.php';?>
+    <?php include 'NavBar.php';?>
 
-<div class="well">
+
     <!--header -->
-    <h1 align="center">Supplier  </h1>
+    <div class="control-header col-sm-15">
+        <h1 align="center">Supplier Registeration </h1>
+    </div>
+</br>
+    </br>
+    </br>
 
 
 
-</div>
+
 <!--Supplier Name-->
 </div>
-<form class="form-inline" role="form">
+<form class="form-inline" role="form" ng-submit="submit()" ng-controller="FormCtrl1">
     <div class="control-label col-sm-3">
         <div class="col-xs-4">
         </div>
     </div>
     <div class="form-group has-success has-feedback">
         <label for="suppliername" class="control-label" style="padding-right:70px">Name</label>
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class=" glyphicon glyphicon-user red"></i></span>
 
-        <input class="form-control" id="suppliername" name="name" type="text"placeholder="Enter Name" value="" aria-describedby="name-format" required pattern="([A-Za-z])">
+        <input class="form-control" id="suppliername" name="name" ng-model="suppliername" type="text"placeholder="Enter Name" >
+        <!--value="" aria-describedby="name-format" required pattern="([A-Za-z])"-->
     </div>
+</div>
 
 </br>
 </br>
+    </br>
 
 <!--Supplier address-->
 
     <div class="control-label col-sm-3"></div>
     <div class="form-group has-success has-feedback">
         <label for="supplieraddress" class="control-label" style="padding-right:50px">Address</label>
-        <textarea class="form-control" rows="4" id="supplieraddress"placeholder="Enter Address" style="width: 220px"></textarea>
+        <textarea class="form-control" rows="4" id="supplieraddress" ng-model="supplieraddress"  placeholder="Enter Address" style="width: 270px"></textarea>
     </div>
+
 
 </br>
 </br>
+    </br>
 
 <!--Phone Number-->
 
@@ -43,12 +56,15 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="supplierphone" class="control-label" style="padding-right:65px">Phone</label>
-        <input class="form-control" id="supplierphone" type="text"placeholder="Phone Number " pattern="[0-7-9]{1}[0-9]{9}">
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class="  glyphicon glyphicon-phone-alt red"></i></span>
+        <input class="form-control" id="supplierphone" ng-model="supplierphone" type="text"placeholder="Phone Number " pattern="[0-7-9]{1}[0-9]{9}">
     </div>
-
+</div>
 
 </br>
 </br>
+    </br>
 <!--Email-->
 
     <div class="control-label col-sm-3">
@@ -57,19 +73,66 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="supplieremail" class="control-label" style="padding-right:74px">Email</label>
-        <input class="form-control" id="supplieremail" input type="email" required placeholder="Email Address">
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
+        <input class="form-control" id="supplieremail" ng-model="supplieremail" input type="email" required placeholder="Email Address">
     </div>
+        </div>
 
 
 </br>
 </br>
+    </br>
 
-<!--Supplier statues-->
+    <!--Supply Iteam Name-->
+
+    <div class="control-label col-sm-3">
+        <div class="col-xs-4">
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <label for="supplieritem" class="control-label" style="padding-right:27px">Supply Itam</label>
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-th-list red"></i></span>
+        <input class="form-control" id="supplieritem" ng-model="supplieritem" input type="text" required placeholder="Enter Item Name">
+    </div>
+        </div>
+
+
+    </br>
+    </br>
+    </br>
+
+    <!--Unite Price-->
+
+    <div class="control-label col-sm-3">
+        <div class="col-xs-4">
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <label for="supplierunitprice" class="control-label" style="padding-right:35px">Unite Price</label>
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-usd red"></i></span>
+        <input class="form-control" id="supplierunitprice"  ng-model="supplierunitprice" input type="text" required placeholder="Enter Unite Price">
+    </div>
+        </div>
+
+
+
+
+    </br>
+    </br>
+    </br>
+
+
+
+
+    <!--Supplier statues-->
 
     <div class="control-label col-sm-3"></div>
     <div class="form-group has-success has-feedback">
         <label for="supplierstatues" class="control-label" style="padding-right:55px">Statues</label>
-        <textarea class="form-control" rows="4" id="supplierstatues"placeholder="Enter Ststues" style="width: 220px"></textarea>
+        <textarea class="form-control" rows="4" id="supplierstatues"  ng-model="supplierstatues" placeholder="Enter Ststues" style="width: 270px"></textarea>
 
     </div>
 
@@ -77,15 +140,23 @@
 </br>
 </br>
 </br>
+
+
 
 <!--subit button-->
 
     <div class="col-md-6 center-block">
         <div class="col-xs-4">
         </div>
-        <button type="suppliersubmit" class="btn btn-primary">Submit</button>
+        <button type="submit" ng-click='submit()' class="btn btn-primary">Submit</button>
         <button type="supplierclear" class="btn btn-primary">Clear</button>
         <button type="suppliercancel" class="btn btn-primary">Cancel</button>
+    </div>
+
+
+
+    <div class="alert-danger" ng-repeat="msg in msgs"> {{ msg}}
+
     </div>
 </form>
 
@@ -93,4 +164,13 @@
 </br>
 </br>
 </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+</section>
 
