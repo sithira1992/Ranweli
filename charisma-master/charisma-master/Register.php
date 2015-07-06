@@ -4,10 +4,16 @@
 
 
     <!--header -->
-    <div class="control-header col-sm-9">
+    <div class="control-header col-sm-10">
     <h1 align="center">Staff Registeration </h1>
 </div>
 
+</br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
 
 
 
@@ -25,28 +31,33 @@
         <label for="fullname" class="control-label" style="padding-right:40px">Full Name</label>
 
 
+           <div class="input-group input-group-md">
+               <span class="input-group-addon"><i class=" glyphicon glyphicon-user red"></i></span>
         <input class="form-control" id="fullname" name="name" ng-model="name" type="text"placeholder="Name With Initial" value=""  required="">
 
 
 
     </div>
+           </div>
 
 
 <!--/form-->
 
 </br>
 </br>
+    </br>
 
 <!--address-->
 <!--form class="form-inline" role="form"-->
     <div class="control-label col-sm-3"></div>
     <div class="form-group has-success has-feedback">
         <label for="address" class="control-label" style="padding-right:50px">Address</label>
-        <textarea class="form-control" rows="4" ng-model="address" id="address"placeholder="Address" style="width: 220px"></textarea>
+        <textarea class="form-control" rows="4" ng-model="address" id="address"placeholder="Address" style="width: 270px"></textarea>
    </div>
 
 </br>
 </br>
+    </br>
 
 
 <!--Gender-->
@@ -68,6 +79,7 @@
 <!--/form-->
 </br>
 </br>
+    </br>
 
 
 <!-- NIC Number-->
@@ -78,12 +90,19 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="nic" class="control-label" style="padding-right:90px">NIC</label>
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark red"></i></span>
         <input class="form-control" id="nic" ng-model="nic"  type="text" placeholder="NIC Number" pattern="[0-9{{9}V}">
     </div>
+
+        </div>
+
+
 <!--/form-->
 
 </br>
 </br>
+    </br>
 
 
 <!--Phone Number-->
@@ -94,12 +113,15 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="phone" class="control-label" style="padding-right:70px">Phone</label>
+        <div class="input-group input-group-md">
+            <span class="input-group-addon"><i class="  glyphicon glyphicon-phone-alt red"></i></span>
         <input class="form-control" id="phone" ng-model="phone" type="text"placeholder="Phone Number " pattern="[0-9]{1}[0-9]{9}" required="">
     </div>
 <!--/form!-->
 
 </br>
 </br>
+        </br>
 
 <!--position-->
 <!--form class="form-inline" role="form"-->
@@ -109,7 +131,7 @@
     </div>
     <div class="form-group has-success has-feedback">
         <label for="Position" class="control-label" style="padding-right:60px">Position</label>
-        <select class="form-control" style="width:215px" ng-model="position">
+        <select class="form-control" style="width:270px" ng-model="position">
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="opel">Opel</option>
@@ -120,6 +142,7 @@
 </div>
     <!--/form-->
         </br>
+    </br>
     </br>
 
         <!--Email-->
@@ -133,7 +156,7 @@
 
                 <div class="input-group input-group-md">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
-                    <input id="inputIcon" ng-model="email" type="text" class="form-control" placeholder="Username"  required="true">
+                    <input id="inputIcon" ng-model="email" type="text" class="form-control" placeholder="Enter Email Address"  required="true">
                 </div>
 
 
@@ -165,6 +188,8 @@
         </br>
         </br>
 </section>
+
+</body>
 
 
 

@@ -38,4 +38,28 @@ angular.module('staffRegistration',[])
         });
         }
 
+}])
+
+.controller('FormCtrl1',['$scope','$http',function($scope, $http)
+{
+    $scope.submit= function () {    //subite button
+
+        $scope.msgs = [];
+        $http.post('db/suppliersRegistration.php',{'suppliername':$scope.suppliername,'supplieraddress':$scope.supplieraddress,'supplierphone':$scope.supplierphone,
+            'supplieremail':$scope.supplieremail,'supplieritem':$scope.supplieritem,'supplierunitprice':$scope.supplierunitprice,'supplierstatues':$scope.supplierstatues}).success(function(data, status, headers, config) {
+            if (data.msg != '')
+            {
+                $scope.msgs.push(data.msg);
+            }
+            else
+            {
+                $scope.msgs.push(data.error);
+            }
+        }).error(function(data, status) { // called asynchronously if an error occurs
+// or server returns response with an error status.
+            $scope.msgs.push(status);
+
+        });
+    }
+
 }]);
