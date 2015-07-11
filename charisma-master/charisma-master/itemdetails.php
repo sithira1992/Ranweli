@@ -18,7 +18,7 @@
 
     <!--Supplire names -->
     <form class="form-inline" role="form" ng-submit="submit()" ng-controller="FormCtrl">
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-1">
             <div class="col-xs-4">
             </div>
         </div>
@@ -39,7 +39,7 @@
         </br>
 
 <!--Item Name-->
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-1">
             <div class="col-xs-4">
             </div>
         </div>
@@ -56,7 +56,7 @@
 
         <!--Unite Price-->
 
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-1">
             <div class="col-xs-4">
             </div>
         </div>
@@ -75,7 +75,7 @@
 
         <!--Quantity-->
 
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-1">
             <div class="col-xs-4">
             </div>
         </div>
@@ -88,6 +88,11 @@
         </div>
 
 
+
+
+
+        
+
         </br>
         </br>
         </br>
@@ -96,7 +101,7 @@
         <!--subit button-->
 
         <div class="col-md-6 center-block">
-            <div class="col-xs-1">
+            <div class="col-xs-0">
             </div>
             <button type="submit" ng-click='submit()' class="btn btn-primary">Submit</button>
             <button type="supplierclear" class="btn btn-primary">Clear</button>
@@ -108,6 +113,10 @@
         <div class="alert-danger" ng-repeat="msg in msgs"> {{ msg}}
 
         </div>
+
+
+
+
 
   </form>
     </section>
