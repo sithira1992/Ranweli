@@ -16,12 +16,12 @@ angular.module('staffRegistration',[])
     }
 }])
 
-.controller('FormCtrl',['$scope','$http',function($scope, $http)
+.controller('StaffCtrl',['$scope','$http',function($scope, $http)
     {
         $scope.submit= function () {
 
             $scope.msgs = [];
-            $http.post('db/staffRegistration.php',{'name':$scope.name,'address':$scope.address,'gender':$scope.gender,
+            $http.post('db/staffRegistration.php?action=add_staff',{'name':$scope.name,'address':$scope.address,'gender':$scope.gender,
                 'nic':$scope.nic,'phone':$scope.phone,'position':$scope.position,'email':$scope.email}).success(function(data, status, headers, config) {
                 if (data.msg != '')
                 {
@@ -40,13 +40,13 @@ angular.module('staffRegistration',[])
 
 }])
 
-.controller('FormCtrl1',['$scope','$http',function($scope, $http)
+.controller('SupplierCtrl',['$scope','$http',function($scope, $http)
 {
 
     $scope.submit= function () {    //subite button
 
         $scope.msgs = [];
-        $http.post('db/suppliersRegistration.php',{'suppliername':$scope.suppliername,'supplieraddress':$scope.supplieraddress,'supplierphone':$scope.supplierphone,
+        $http.post('db/suppliersRegistration.php?action=add_supplier',{'suppliername':$scope.suppliername,'supplieraddress':$scope.supplieraddress,'supplierphone':$scope.supplierphone,
             'supplieremail':$scope.supplieremail,'supplieritem':$scope.supplieritem,'supplierunitprice':$scope.supplierunitprice,'supplierstatues':$scope.supplierstatues}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
@@ -63,5 +63,21 @@ angular.module('staffRegistration',[])
         });
     }
 
-}]);
+}])
 
+
+.controller('ItemCtrl',['$scope','$http',function($scope, $http)
+{
+    $scope.pagedItems    =  [];
+
+    $scope.get_suppliers = function() {
+        $http.get('db/suppliersRegistration.php?action=get_supplier').success(function(data)
+        {
+            //$scope.product_detail = data;
+            $scope.pagedItems = data;
+
+        });
+    }
+
+
+}]);
