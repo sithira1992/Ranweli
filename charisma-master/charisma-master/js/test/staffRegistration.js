@@ -66,7 +66,7 @@ angular.module('staffRegistration',[])
 }])
 
 
-.controller('ItemCtrl',['$scope','$http',function($scope, $http)
+.controller('ItemCtrl',['$scope','$http',function($scope, $http,$window)
 {
     $scope.pagedItems    =  [];
 
@@ -79,5 +79,6 @@ angular.module('staffRegistration',[])
         });
     }
 
+  
 
 }]);

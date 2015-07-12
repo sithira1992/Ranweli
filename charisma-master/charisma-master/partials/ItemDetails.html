@@ -24,11 +24,11 @@
         </div>
         <div class="form-group has-success has-feedback">
             <label class="control-label" style="padding-right:60px">Supplier Name</label>
-            <select class="form-control" ng-init="get_suppliers()"  style="width:270px" ng-model="position">
-                <option value = "0" label = "Please Select"></option>
-                <option ng-repeat="name in pagedItems" >   {{name.full_name}}</option>
 
 
+
+                    <select class="form-control" style="width:270px"  ng-model="suppId" ng-init="get_suppliers()" ng-options="supplier.id as supplier.full_name for supplier in pagedItems track by supplier.id"
+                            ng-change="GetValue()">
             </select>
         </div>
 
@@ -103,7 +103,7 @@
         <div class="col-md-06 center-block">
             <div class="col-xs-0">
             </div>
-            <button type="submit" ng-click='submit()' class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <button type="supplierclear" class="btn btn-primary">Clear</button>
             <button type="suppliercancel" class="btn btn-primary">Cancel</button>
         </div>
