@@ -34,6 +34,24 @@ myApp.config(['$routeProvider',function($routeProvider){
                         controller: 'ItemCtrl'
 
                     }).
+                    when('/ItemDetails',
+                    {
+                        templateUrl: 'partials/ItemDetails.html',
+                        controller: 'ItemCtrl'
+
+                    }).
+                    when('/SiteRegistration',
+                    {
+                        templateUrl: 'partials/SiteRegistration.html',
+                        controller: 'SiteCtrl'
+
+                    }).
+                    when('/test',
+                    {
+                        templateUrl: 'partials/test.html',
+                        controller: 'SiteCtrl'
+
+                    }).
         otherwise({
             redirectTo: '/blank.html'
         })
