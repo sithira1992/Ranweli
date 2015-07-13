@@ -25,7 +25,10 @@
         <table style="width:100%">
             <tr>
                 <td><label for="rglocation" class="control-label">Address</label></td>
-                <td><input class="form-control" id="rglocation" ng-model="rgAddress" type="text"placeholder="Enter Site Address"></td>
+                <td>    <div class="input-group input-group-md">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark red"></i></span>
+                    <input class="form-control" id="nic" ng-model="nic"  type="text" placeholder="NIC Number" pattern="[0-9{{9}V}">
+                </div></td>
                 <td><label for="rglocation" class="control-label">Address</label></td>
                 <td><input class="form-control" id="rglocation" ng-model="rgAddress" type="text"placeholder="Enter Site Address"></td>
             </tr>
