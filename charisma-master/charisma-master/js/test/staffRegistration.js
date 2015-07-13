@@ -78,7 +78,51 @@ angular.module('staffRegistration',[])
 
         });
     }
+    $scope.submit= function () {    //subite button
+
+        $scope.msgs = [];
+        $http.post('db/ItemDetails.php?action=add_item',{'suppId':$scope.suppId,'item':$scope.item,'itemunite':$scope.itemunite,
+            'itemunitprice':$scope.itemunitprice,'itemquantity':$scope.itemquantity,'itemdescription':$scope.itemdescription,'itemdate':$scope.itemdate}).success(function(data, status, headers, config) {
+            if (data.msg != '')
+            {
+                $scope.msgs.push(data.msg);
+            }
+            else
+            {
+                $scope.msgs.push(data.error);
+            }
+        }).error(function(data, status) { // called asynchronously if an error occurs
+// or server returns response with an error status.
+            $scope.msgs.push(status);
+
+        });
+    }
 
   
+
+}])
+
+.controller('SiteCtrl',['$scope','$http',function($scope, $http)
+{
+
+    $scope.submit= function () {    //subite button
+
+        $scope.msgs = [];
+        $http.post('db/SiteRegistration.php?action=add_site',{'rgAddress':$scope.rgAddress,'rgmanagername':$scope.rgmanagername,'rgstartdate':$scope.rgstartdate,
+            'rgplandate':$scope.rgplandate,'rgpactualdate':$scope.rgpactualdate,'rgstatues':$scope.rgstatues}).success(function(data, status, headers, config) {
+            if (data.msg != '')
+            {
+                $scope.msgs.push(data.msg);
+            }
+            else
+            {
+                $scope.msgs.push(data.error);
+            }
+        }).error(function(data, status) { // called asynchronously if an error occurs
+// or server returns response with an error status.
+            $scope.msgs.push(status);
+
+        });
+    }
 
 }]);
