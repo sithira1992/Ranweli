@@ -66,7 +66,7 @@ angular.module('staffRegistration',[])
 }])
 
 
-.controller('ItemCtrl',['$scope','$http',function($scope, $http,$window)
+.controller('ItemCtrl',['$scope','$http',function($scope, $http)
 {
     $scope.pagedItems    =  [];
 
