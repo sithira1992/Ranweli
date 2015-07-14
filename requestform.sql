@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2015 at 06:59 PM
+-- Generation Time: Jul 14, 2015 at 08:05 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -37,7 +37,19 @@ CREATE TABLE IF NOT EXISTS `requestform` (
   PRIMARY KEY (`id`),
   KEY `FK_Location_idx` (`FK_Location`),
   KEY `FK_ManagerName_idx` (`FK_ManagerName`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `requestform`
+--
+
+INSERT INTO `requestform` (`id`, `FK_Location`, `FK_ManagerName`, `Item`, `Unit`, `Quantity`, `Date`) VALUES
+(1, 3, 12, 'fsdfsf', 'Bags', 'sf', 'sfsdf'),
+(2, 3, 12, 'fsdfsf', 'Bags', 'sf', 'sfsdf'),
+(3, 3, 12, 'Weli', 'cube', '20', '2015/10/06'),
+(4, 3, 18, 'Metl', 'Bags', '5', '2015/06/20'),
+(5, 3, 19, 'Ja', 'Kg', '5', '2015/06/20'),
+(6, 5, 10, 'sad', 'Kg', 'ad', 'ad');
 
 --
 -- Constraints for dumped tables
