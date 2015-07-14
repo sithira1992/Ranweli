@@ -52,6 +52,13 @@ myApp.config(['$routeProvider',function($routeProvider){
                         controller: 'SiteCtrl'
 
                     }).
+
+                    when('/RequestForm',
+                    {
+                        templateUrl: 'partials/RequestForm.html',
+                        controller: 'RequestCtrl'
+
+                    }).
         otherwise({
             redirectTo: '/blank.html'
         })
