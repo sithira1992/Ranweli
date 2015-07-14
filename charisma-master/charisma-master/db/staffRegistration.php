@@ -82,7 +82,7 @@ function get_manager()
     {
         $data[] = array(
             "id"            => $rows['id'],
-            "full_name"     => $rows['fullname'],
+            "full_name"     => $rows['fullName'],
 
         );
     }

@@ -137,7 +137,7 @@ angular.module('staffRegistration',[])
         $http.get('db/SiteRegistration.php?action=get_location').success(function(data)
         {
             //$scope.product_detail = data;
-            $scope.pagedItems = data;
+            $scope.locations = data;
 
         });
     }
@@ -147,7 +147,7 @@ angular.module('staffRegistration',[])
         $http.get('db/staffRegistration.php?action=get_manager').success(function(data)
         {
             //$scope.product_detail = data;
-            $scope.pagedItems = data;
+            $scope.managers = data;
 
         });
     }

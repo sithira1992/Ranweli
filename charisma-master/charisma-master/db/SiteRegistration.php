@@ -81,7 +81,7 @@ function get_location()
     {
         $data[] = array(
             "id"            => $rows['SiteID'],
-            "full_name"     => $rows['SiteAddress'],
+            "address"     => $rows['SiteAddress'],
 
         );
     }
