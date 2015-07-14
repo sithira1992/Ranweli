@@ -19,47 +19,23 @@
     </div>
 
     <!--form class="form-inline" role="form"-->
-    <form class="form-inline" role="form">
-        <div class="control-label col-sm-2">
+    <!-- Location -->
+    <form class="form-inline" role="form" ng-submit="submit()">
+        <div class="control-label col-sm-3">
             <div class="col-xs-4">
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
 
 
-            <label for="sitename" class="control-label" style="padding-right:40px">Site Name</label>
-            <div class="input-group input-group-md">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-hand-right red"></i></span>
-
-
-                <input class="form-control" id="sitename" ng-model="name" type="text"placeholder="Enter Site Name">
-
-
-
-            </div>
-        </div>
-        <!--/form-->
-
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-
-
-        <!--Site Location-->
-        <!--form class="form-inline" role="form"-->
-        <div class="control-label col-sm-2">
-            <div class="col-xs-4">
-            </div>
         </div>
         <div class="form-group has-success has-feedback">
-            <label for="location" class="control-label" style="padding-right:50px">Location</label>
-            <div class="input-group input-group-md">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker red"></i></span>
-                <input class="form-control" id="location" ng-model="location" type="text"placeholder="Enter Site Location">
-            </div>
+            <label class="control-label" style="padding-right:40px">Location</label>
+
+
+
+            <select class="form-control" style="width:270px"  ng-model="locId" ng-init="get_location()" ng-options="location.id as location.full_name for supplier in pagedItems track by location.id"
+                    ng-change="GetValue()">
+            </select>
         </div>
         <!--/form-->
 
@@ -69,18 +45,21 @@
         </br>
 
 
-        <!--Site Manager Name-->
+
+        <!--Manager Name-->
         <!--form class="form-inline" role="form"-->
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-3">
             <div class="col-xs-4">
             </div>
         </div>
         <div class="form-group has-success has-feedback">
-            <label for="manager" class="control-label" style="padding-right:50px">Manager</label>
-            <div class="input-group input-group-md">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-                <input class="form-control" id="manager" ng-model="managername" type="text"placeholder="Enter Manager Name">
-            </div>
+            <label class="control-label" style="padding-right:40px">Manager</label>
+
+
+
+            <select class="form-control" style="width:270px"  ng-model="mngId" ng-init="get_manager()" ng-options="manager.id as manager.full_name for supplier in pagedItems track by manager.id"
+                    ng-change="GetValue()">
+            </select>
         </div>
         <!--/form-->
 
@@ -89,14 +68,15 @@
         </br>
         </br>
 
-        <!--Item Name-->
+
+            <!--Item Name-->
         <!--form class="form-inline" role="form"-->
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-3">
             <div class="col-xs-4">
             </div>
         </div>
         <div class="form-group has-success has-feedback">
-            <label for="item" class="control-label" style="padding-right:80px">Item</label>
+            <label for="item" class="control-label" style="padding-right:75px">Item</label>
             <div class="input-group input-group-md">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-th-list red"></i></span>
                 <input class="form-control" id="item" type="text" ng-model="item"placeholder="Enter Item Name">
@@ -111,6 +91,10 @@
 
             <!--Type of measure -->
             <!--form class="form-inline" role="form"-->
+            <div class="control-label col-sm-3">
+                <div class="col-xs-4">
+                </div>
+            </div>
             <form class="form-inline" role="form">
                 <div class="control-label col-sm-2">
                     <div class="col-xs-4">
@@ -118,7 +102,7 @@
                 </div>
                 <div class="form-group has-success has-feedback">
                     <label for="measure" class="control-label" style="padding-right:80px">Unit</label>
-                    <select class="form-control" style="width:220px" ng-model="measure">
+                    <select class="form-control" style="width:220px" ng-model="measure" >
                         <option value="cube">Cube</option>
                         <option value="Kg">Kg</option>
                         <option value="Bags">Bags</option>
@@ -139,7 +123,7 @@
         </br>
 
         <!--Quntity-->
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-3">
             <div class="col-xs-4">
             </div>
         </div>
@@ -162,13 +146,13 @@
 
         <!--Date-->
         <!--form class="form-inline" role="form"-->
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-3">
             <div class="col-xs-4">
             </div>
         </div>
         <div class="form-group has-success has-feedback">
             <label for="date" class="control-label" style="padding-right:75px">Date</label>
-            <input class="form-control" id="date" type="text"placeholder="Enter Date">
+            <input class="form-control" id="date" ng-model="date" type="text"placeholder="Enter Date">
         </div>
         <!--/form-->
 
@@ -181,10 +165,10 @@
 
         <!--Send button-->
         <!--form class="form-inline" role="form"-->
-        <div class="col-md-2 center-block">
-            <div class="col-xs-2">
+        <div class="col-md-06 center-block">
+            <div class="col-xs-0">
             </div>
-            <button type="submit" class="btn btn-primary">Send</button>
+            <button type="submit" class="btn btn-primary">Apply</button>
             <button type="cancel" class="btn btn-primary">Cancel</button>
         </div>
     </form>

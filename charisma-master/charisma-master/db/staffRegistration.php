@@ -11,8 +11,8 @@ switch($_GET['action'])  {
         add_staff();
         break;
 
-    case 'get_product' :
-        get_product();
+    case 'get_manager' :
+        get_manager();
         break;
 
     case 'edit_product' :
@@ -67,5 +67,26 @@ function add_staff()
         $jsn = json_encode($arr);
         print_r($jsn);
     }
+}
+
+function get_manager()
+{
+
+    $con = mysql_connect('localhost', 'root', '');
+    mysql_select_db('ranweli', $con);
+
+    $qry = mysql_query('SELECT * from staffregistraion');
+
+    $data = array();
+    while($rows = mysql_fetch_array($qry))
+    {
+        $data[] = array(
+            "id"            => $rows['id'],
+            "full_name"     => $rows['fullname'],
+
+        );
+    }
+    print_r(json_encode($data));
+    return json_encode($data);
 }
 ?>

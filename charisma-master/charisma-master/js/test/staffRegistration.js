@@ -15,7 +15,7 @@ angular.module('staffRegistration',[])
         return $scope.values;
     }
 }])
-
+//Staff Registration Controller
 .controller('StaffCtrl',['$scope','$http',function($scope, $http)
     {
         $scope.submit= function () {
@@ -65,7 +65,7 @@ angular.module('staffRegistration',[])
 
 }])
 
-
+//Item Registration Controller
 .controller('ItemCtrl',['$scope','$http',function($scope, $http)
 {
     $scope.pagedItems    =  [];
@@ -124,5 +124,53 @@ angular.module('staffRegistration',[])
 
         });
     }
+
+}])
+
+
+//Request Form Controller
+.controller('RequestCtrl',['$scope','$http',function($scope, $http)
+{
+    $scope.pagedItems    =  [];
+
+    $scope.get_location = function() {
+        $http.get('db/SiteRegistration.php?action=get_location').success(function(data)
+        {
+            //$scope.product_detail = data;
+            $scope.pagedItems = data;
+
+        });
+    }
+    $scope.pagedItems    =  [];
+
+    $scope.get_manager = function() {
+        $http.get('db/staffRegistration.php?action=get_manager').success(function(data)
+        {
+            //$scope.product_detail = data;
+            $scope.pagedItems = data;
+
+        });
+    }
+    $scope.submit= function () {    //subite button
+
+        $scope.msgs = [];
+        $http.post('db/RequestForm.php?action=add_request',{'locId':$scope.locId,'mngId':$scope.mngId,'item':$scope.item,
+            'measure':$scope.measure,'quantity':$scope.quantity,'date':$scope.date}).success(function(data, status, headers, config) {
+            if (data.msg != '')
+            {
+                $scope.msgs.push(data.msg);
+            }
+            else
+            {
+                $scope.msgs.push(data.error);
+            }
+        }).error(function(data, status) { // called asynchronously if an error occurs
+// or server returns response with an error status.
+            $scope.msgs.push(status);
+
+        });
+    }
+
+
 
 }]);

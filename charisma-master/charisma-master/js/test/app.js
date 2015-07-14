@@ -53,9 +53,9 @@ myApp.config(['$routeProvider',function($routeProvider){
 
                     }).
 
-                    when('/RequestForm',
+                    when('/Requestform',
                     {
-                        templateUrl: 'partials/RequestForm.html',
+                        templateUrl: 'partials/Requestform.html',
                         controller: 'RequestCtrl'
 
                     }).

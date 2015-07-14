@@ -11,8 +11,8 @@ switch($_GET['action'])  {
         add_site();
         break;
 
-    case 'get_product' :
-        get_product();
+    case 'get_location' :
+        get_location();
         break;
 
     case 'edit_product' :
@@ -66,5 +66,26 @@ function add_site()
         $jsn = json_encode($arr);
         print_r($jsn);
     }
+}
+
+function get_location()
+{
+
+    $con = mysql_connect('localhost', 'root', '');
+    mysql_select_db('ranweli', $con);
+
+    $qry = mysql_query('SELECT * from siteregistration');
+
+    $data = array();
+    while($rows = mysql_fetch_array($qry))
+    {
+        $data[] = array(
+            "id"            => $rows['SiteID'],
+            "full_name"     => $rows['SiteAddress'],
+
+        );
+    }
+    print_r(json_encode($data));
+    return json_encode($data);
 }
 ?>
