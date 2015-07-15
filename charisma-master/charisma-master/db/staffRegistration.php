@@ -75,7 +75,7 @@ function get_manager()
     $con = mysql_connect('localhost', 'root', '');
     mysql_select_db('ranweli', $con);
 
-    $qry = mysql_query('SELECT * from staffregistraion');
+    $qry = mysql_query('SELECT * from staffregistraion where jobPosition="Site Manager"');
 
     $data = array();
     while($rows = mysql_fetch_array($qry))
