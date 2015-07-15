@@ -158,12 +158,14 @@ angular.module('staffRegistration',[])
             'measure':$scope.measure,'quantity':$scope.quantity,'date':$scope.date}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
+                msgs="Order Create Successfully"
                 $scope.get_Order_details();
-                $scope.msgs.push(data.msg);
+                $scope.msgs.push(msgs);
             }
             else
             {
-                $scope.msgs.push(data.error);
+                msgs="Order Not Create Successfully"
+                $scope.msgs.push(msgs);
             }
         }).error(function(data, status) { // called asynchronously if an error occurs
 // or server returns response with an error status.
