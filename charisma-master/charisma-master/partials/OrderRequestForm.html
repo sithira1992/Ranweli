@@ -2,7 +2,7 @@
 
     <!--header -->
     <div class="control-header col-sm-9">
-        <h1 align="center">Request Form </h1>
+        <h1 align="center" ng-init="get_Order_details()">Request Form </h1>
 
 
 
@@ -20,7 +20,7 @@
 
     <!--form class="form-inline" role="form"-->
     <!-- Location -->
-    <form class="form-inline" role="form" ng-submit="submit() ">
+    <form class="form-inline" role="form" ng-submit="submit()">
         <div class="control-label col-sm-3">
             <div class="col-xs-4">
             </div>
@@ -33,7 +33,7 @@
 
 
 
-            <select class="form-control" style="width:270px"  ng-model="locId" ng-init="get_location()" ng-options="location.id as location.address for location in locations track by location.id"
+            <select class="form-control" style="width:270px"   ng-model="locId" ng-init="get_location()"  ng-options="location.id as location.address for location in locations track by location.id"
                    >
             </select>
         </div>
@@ -196,17 +196,6 @@
 
 
 
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-
-
     <div class="box-inner">
         <div class="box-header well" data-original-title="">
             <h2>Bordered Table</h2>
@@ -231,12 +220,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Muhammad Usman</td>
-                    <td class="center">2012/01/01</td>
-                    <td class="center">Member</td>
-                    <td class="center">Member</td>
-                    <td class="center">Member</td>
+                <tr ng-repeat="detail in details">
+                    <td>{{detail.SiteAddress}}</td>
+                    <td class="center">{{detail.fullname}}</td>
+                    <td class="center">{{detail.Item}}</td>
+                    <td class="center">{{detail.Unit}}</td>
+                    <td class="center">{{detail.Quantity}}</td>
+                    <td class="center">{{detail.Date}}</td>
                     <td class="center">
                         <span class="label-success label label-default">Active</span>
                     </td>

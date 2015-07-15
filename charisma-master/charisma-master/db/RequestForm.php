@@ -11,8 +11,8 @@ switch($_GET['action'])  {
         add_request();
         break;
 
-    case 'get_product' :
-        get_product();
+    case 'get_OrderDetails' :
+        get_OrderDetails();
         break;
 
     case 'edit_product' :
@@ -66,5 +66,33 @@ function add_request()
         $jsn = json_encode($arr);
         print_r($jsn);
     }
+}
+
+
+function get_OrderDetails()
+{
+
+    $con = mysql_connect('localhost', 'root', '');
+    mysql_select_db('ranweli', $con);
+
+    $qry = mysql_query('SELECT r.id,st.fullname,s.SiteAddress,r.Item,r.Unit,r.Quantity,r.Date FROM ranweli.requestform r, ranweli.siteregistration s,ranweli.staffregistraion st
+where r.FK_Location=s.SiteID and r.FK_ManagerName=st.id');
+
+    $data = array();
+    while($rows = mysql_fetch_array($qry))
+    {
+        $data[] = array(
+            "id"            => $rows['id'],
+            "fullname"     => $rows['fullname'],
+            "SiteAddress"     => $rows['SiteAddress'],
+            "Item"     => $rows['Item'],
+            "Unit"     => $rows['Unit'],
+            "Quantity"     => $rows['Quantity'],
+            "Date"     => $rows['Date'],
+        );
+    }
+    print_r(json_encode($data));
+    return json_encode($data);
+
 }
 ?>

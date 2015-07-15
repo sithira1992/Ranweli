@@ -158,6 +158,7 @@ angular.module('staffRegistration',[])
             'measure':$scope.measure,'quantity':$scope.quantity,'date':$scope.date}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
+                $scope.get_Order_details();
                 $scope.msgs.push(data.msg);
             }
             else
@@ -171,6 +172,13 @@ angular.module('staffRegistration',[])
         });
     }
 
+    $scope.get_Order_details = function() {
+        $http.get('db/RequestForm.php?action=get_OrderDetails').success(function(data)
+        {
+            //$scope.product_detail = data;
+            $scope.details = data;
 
+        });
+    }
 
 }]);
