@@ -71,16 +71,17 @@
 
         <!--Site Start Date-->
         <div class="control-label col-sm-3">
-            <div class="col-xs-4">
+            <div class="col-xs-1">
             </div>
         </div>
         <div class="form-group has-success has-feedback">
-            <label for="rgstartdate" class="control-label" style="padding-right:45px">Start Date</label>
+            <label for="rgstartdate" class="control-label" style="padding-right:50px">Start Date</label>
             <div class="input-group input-group-md">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-flash red"></i></span>
-                <input class="form-control" id="rgstartdate" ng-model="rgstartdate" type="text"placeholder="Enter Start Date">
+                <input type="date" name="doj" id="rgstartdate" ng-model="rgstartdate" width="100px" >
+
             </div>
         </div>
+
         </br>
         </br>
         </br>
@@ -88,15 +89,16 @@
 
 
         <!--Site Plan Date-->
+
         <div class="control-label col-sm-3">
-            <div class="col-xs-4">
+            <div class="col-xs-1">
             </div>
         </div>
         <div class="form-group has-success has-feedback">
             <label for="rgplandate" class="control-label" style="padding-right:50px">Plan Date</label>
             <div class="input-group input-group-md">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-flash red"></i></span>
-                <input class="form-control" id="rgplandate" ng-model="rgplandate" type="text"placeholder="Enter Plan Date">
+                <input type="date" name="doj" id="rgplandate" ng-model="rgplandate" width="100px" >
+
             </div>
         </div>
 
@@ -107,14 +109,14 @@
 
         <!--Site Actual Date-->
         <div class="control-label col-sm-3">
-            <div class="col-xs-4">
+            <div class="col-xs-1">
             </div>
         </div>
         <div class="form-group has-success has-feedback">
-            <label for="rgpactualdate" class="control-label" style="padding-right:35px">Actual Date</label>
+            <label for="date" class="control-label" style="padding-right:40px">Actual Date</label>
             <div class="input-group input-group-md">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-flash red"></i></span>
-                <input class="form-control" id="rgpactualdate" ng-model="rgpactualdate" type="text"placeholder="Enter Actual Date">
+                <input type="date" name="doj" id="date" ng-model="rgpactualdate" width="100px" >
+
             </div>
         </div>
 
@@ -152,7 +154,12 @@
         </div>
             </div>
 
-        <li class="alert-danger" ng-repeat="msg in msgs"> {{ msg}} </li>
+        </br>
+        </br>
+
+        <div class="alert-danger" ng-repeat="msg in msgs"> {{ msg}}
+
+        </div>
 
 
     </br>

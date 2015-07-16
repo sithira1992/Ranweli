@@ -39,7 +39,7 @@ angular.module('staffRegistration',[])
         }
 
 }])
-
+//Suppler Registration
 .controller('SupplierCtrl',['$scope','$http',function($scope, $http)
 {
 
@@ -50,11 +50,13 @@ angular.module('staffRegistration',[])
             'supplieremail':$scope.supplieremail,'supplieritem':$scope.supplieritem,'supplierunitprice':$scope.supplierunitprice,'supplierstatues':$scope.supplierstatues}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
-                $scope.msgs.push(data.msg);
+                msgs="**Suppler Register Successfully**"
+                $scope.msgs.push(msgs);
             }
             else
             {
-                $scope.msgs.push(data.error);
+                msgs="**Not Register**"
+                $scope.msgs.push(msgs);
             }
         }).error(function(data, status) { // called asynchronously if an error occurs
 // or server returns response with an error status.
@@ -85,11 +87,13 @@ angular.module('staffRegistration',[])
             'itemunitprice':$scope.itemunitprice,'itemquantity':$scope.itemquantity,'itemdescription':$scope.itemdescription,'itemdate':$scope.itemdate}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
-                $scope.msgs.push(data.msg);
+                msgs="**Item Register Successfully**"
+                $scope.msgs.push(msgs);
             }
             else
             {
-                $scope.msgs.push(data.error);
+                msgs="**Not Register**"
+                $scope.msgs.push(msgs);
             }
         }).error(function(data, status) { // called asynchronously if an error occurs
 // or server returns response with an error status.
@@ -101,7 +105,7 @@ angular.module('staffRegistration',[])
   
 
 }])
-
+    //Site Registration Controller
 .controller('SiteCtrl',['$scope','$http',function($scope, $http)
 {
 
@@ -112,11 +116,13 @@ angular.module('staffRegistration',[])
             'rgplandate':$scope.rgplandate,'rgpactualdate':$scope.rgpactualdate,'rgstatues':$scope.rgstatues}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
-                $scope.msgs.push(data.msg);
+                msgs="**Site Register Successfully**"
+                $scope.msgs.push(msgs);
             }
             else
             {
-                $scope.msgs.push(data.error);
+                msgs="Not Site Register"
+                $scope.msgs.push(msgs);
             }
         }).error(function(data, status) { // called asynchronously if an error occurs
 // or server returns response with an error status.
@@ -124,6 +130,7 @@ angular.module('staffRegistration',[])
 
         });
     }
+
 
 }])
 
@@ -158,13 +165,13 @@ angular.module('staffRegistration',[])
             'measure':$scope.measure,'quantity':$scope.quantity,'date':$scope.date}).success(function(data, status, headers, config) {
             if (data.msg != '')
             {
-                msgs="Order Create Successfully"
+                msgs="**Order Create Successfully**"
                 $scope.get_Order_details();
                 $scope.msgs.push(msgs);
             }
             else
             {
-                msgs="Order Not Create Successfully"
+                msgs="**Order Not Create Successfully**"
                 $scope.msgs.push(msgs);
             }
         }).error(function(data, status) { // called asynchronously if an error occurs
