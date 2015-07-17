@@ -3,28 +3,28 @@
  */
 var  myApp=angular.module('myApp',[
     'ngRoute',
-    'staffRegistration'
+    'controler'
 
 ]);
 
 myApp.config(['$routeProvider',function($routeProvider){
 
                 $routeProvider.
-                    when('/StaffRegistration',
+                    when('/StaffRegistration/',
                 {
-                    templateUrl: 'partials/Register.html',
+                    templateUrl: './partials/Register.html',
                     controller: 'StaffCtrl'
 
                 }).
                 when('/SupplierRegistration',
                 {
-                    templateUrl: 'partials/SupplierDetails.html',
+                    templateUrl: './partials/SupplierDetails.html',
                     controller: 'SupplierCtrl'
 
                 }).
                     when('/AddSupplierItemDetails',
                     {
-                        templateUrl: 'partials/ItemDetails.html',
+                        templateUrl: './partials/ItemDetails.html',
                         controller: 'ItemCtrl'
 
                     }).
@@ -36,32 +36,33 @@ myApp.config(['$routeProvider',function($routeProvider){
                     }).
                     when('/ItemDetails',
                     {
-                        templateUrl: 'partials/ItemDetails.html',
+                        templateUrl: './partials/ItemDetails.html',
                         controller: 'ItemCtrl'
 
                     }).
                     when('/SiteRegistration',
                     {
-                        templateUrl: 'partials/SiteRegistration.html',
+                        templateUrl: './partials/SiteRegistration.html',
                         controller: 'SiteCtrl'
 
                     }).
                     when('/test',
                     {
-                        templateUrl: 'partials/test.html',
+                        templateUrl: './partials/test.html',
                         controller: 'SiteCtrl'
 
                     }).
 
                     when('/OrderRequestForm',
                     {
-                        templateUrl: 'partials/OrderRequestForm.html',
+                        templateUrl: './partials/OrderRequestForm.html',
                         controller: 'RequestCtrl'
 
                     }).
         otherwise({
-            redirectTo: '/blank.html'
-        })
+            redirectTo: '/OrderRequestForm.html'
+        });
+
 
     //$locationProvider.html5Mode(true);
 }])

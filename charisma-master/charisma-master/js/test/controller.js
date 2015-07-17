@@ -1,4 +1,4 @@
-angular.module('staffRegistration',[])
+angular.module('controler',[])
 
 .controller('RepeatCtrl',['$scope',function($scope)
 {
@@ -18,9 +18,11 @@ angular.module('staffRegistration',[])
 //Staff Registration Controller
 .controller('StaffCtrl',['$scope','$http',function($scope, $http)
     {
+        $scope.titles=['Staff Registration'];
         $scope.submit= function () {
 
             $scope.msgs = [];
+
             $http.post('db/staffRegistration.php?action=add_staff',{'name':$scope.name,'address':$scope.address,'gender':$scope.gender,
                 'nic':$scope.nic,'phone':$scope.phone,'position':$scope.position,'email':$scope.email}).success(function(data, status, headers, config) {
                 if (data.msg != '')
