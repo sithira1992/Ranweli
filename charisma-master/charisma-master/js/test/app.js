@@ -59,9 +59,29 @@ myApp.config(['$routeProvider',function($routeProvider){
                         controller: 'RequestCtrl'
 
                     }).
+                    when('/UpdateRegister',
+                    {
+                        templateUrl: './partials/UpdateRegister.html',
+                        controller: 'StaffCtrl'
+
+                    }).
+                    when('/UpdateSupplierDetails',
+                    {
+                        templateUrl: './partials/UpdateSupplierDetails.html',
+                        controller: 'SupplierCtrl'
+
+                    }).
+                    when('/UpdateSiteDetails',
+                    {
+                        templateUrl: './partials/UpdateSiteDetails.html',
+                        controller: 'SiteCtrl'
+
+                    }).
         otherwise({
             redirectTo: '/OrderRequestForm.html'
         });
+
+
 
 
     //$locationProvider.html5Mode(true);

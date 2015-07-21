@@ -15,6 +15,9 @@ switch($_GET['action'])  {
     case 'edit_product' :
         edit_product();
         break;
+    case 'get_suppliers' :
+        get_suppliers();
+        break;
 
     case 'delete_product' :
         delete_product();
@@ -82,6 +85,33 @@ function get_supplier()
         $data[] = array(
             "id"            => $rows['id'],
             "full_name"     => $rows['fullname'],
+
+        );
+    }
+    print_r(json_encode($data));
+    return json_encode($data);
+}
+
+function get_suppliers()
+{
+    $con = mysql_connect('localhost', 'root', '');
+    mysql_select_db('ranweli', $con);
+
+    $qry = mysql_query('SELECT * from registersupplier');
+
+    $data = array();
+    while($rows = mysql_fetch_array($qry))
+    {
+        $data[] = array(
+            "fullname"    => $rows['fullname'],
+            "address"     => $rows['address'],
+            "phone"       => $rows['phone'],
+            "email"       => $rows['email'],
+            "supitem"     => $rows['supitem'],
+            "unitprice"   => $rows['unitprice'],
+            "statues"     => $rows['statues'],
+
+
 
         );
     }

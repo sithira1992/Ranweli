@@ -18,6 +18,17 @@ angular.module('controler',[])
 //Staff Registration Controller
 .controller('StaffCtrl',['$scope','$http',function($scope, $http)
     {
+
+        $scope.pagedItems    =  [];
+
+        $scope.get_staff = function() {
+            $http.get('db/staffRegistration.php?action=get_staff').success(function(data)
+            {
+                //$scope.product_detail = data;
+                $scope.pagedItems = data;
+
+            });
+        }
         $scope.titles=['Staff Registration'];
         $scope.submit= function () {
 
@@ -63,6 +74,14 @@ angular.module('controler',[])
         }).error(function(data, status) { // called asynchronously if an error occurs
 // or server returns response with an error status.
             $scope.msgs.push(status);
+
+        });
+    }
+    $scope.get_suppliers = function() {
+        $http.get('db/suppliersRegistration.php?action=get_suppliers').success(function(data)
+        {
+            //$scope.product_detail = data;
+            $scope.pagedItems = data;
 
         });
     }
@@ -129,6 +148,15 @@ angular.module('controler',[])
         }).error(function(data, status) { // called asynchronously if an error occurs
 // or server returns response with an error status.
             $scope.msgs.push(status);
+
+        });
+    }
+
+    $scope.get_suppliers = function() {
+        $http.get('db/suppliersRegistration.php?action=get_suppliers').success(function(data)
+        {
+            //$scope.product_detail = data;
+            $scope.details = data;
 
         });
     }
